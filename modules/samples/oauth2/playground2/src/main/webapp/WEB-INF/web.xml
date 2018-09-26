@@ -44,6 +44,17 @@
         <servlet-name>IDTokenDecrypterServlet</servlet-name>
         <servlet-class>org.wso2.sample.identity.oauth2.IDTokenDecrypterServlet</servlet-class>
     </servlet>
+
+    <servlet>
+        <servlet-name>OIDCBackChannelLogoutServlet</servlet-name>
+        <servlet-class>org.wso2.sample.identity.oauth2.OIDCBackChannelLogoutServlet</servlet-class>
+        <load-on-startup>0</load-on-startup>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>OIDCBackChannelLogoutServlet</servlet-name>
+        <url-pattern>/logout</url-pattern>
+    </servlet-mapping>
     
    <servlet-mapping>
         <servlet-name>OAuth2ClientServlet</servlet-name>
