@@ -798,7 +798,11 @@
                     String sid = SessionIdStore.getSid(request.getParameter("idToken"));
                     if(sid!=null) {
                         SessionIdStore.storeSession(sid,session);
-                        System.out.println("Session ID stored.");
+            %>
+                        <script>
+                            console.log("Session Id stored.");
+                        </script>
+            <%
                     }
                 }
             %>
